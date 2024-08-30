@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圈圈の个人主页</title>
+    <link rel="icon" href="favicon.ico " type="image/x-icon">
+    <style>
+        .rounded-box {
+            width: 1350px;
+            height: 650px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .rounded-box p {
+            font-size: 16px;
+            color: #333;
+        }
+       .inner-rounded-box {
+           width: 500px;
+           height: 300px;
+           background-color: #fff;
+           border-radius: 5px;
+           margin: 10px auto;
+
+    </style>	
+</head>
+<body>
+    <div class="rounded-box">	
+         <div class="rounded-container">
+        <h1>圈圈の个人主页</h1>
+        <h2>欢迎你来到一位非常屑的UP主的个人主页</h2>
+        <br/><p>UP自制软件合集</p>
+	<p>1.圈圈浏览器     <a href="https://wwjy.lanzouj.com/iRuO91mnkxwh">蓝奏云网盘下载（提取码:9jz4）<a> <a href="https://spaceqq.github.io/ruanjian/LLQ10.exe">官网下载<a> 版本：V1.0 </p>
+	<p>2.圈圈记事本     <a href="https://wwjy.lanzouj.com/iouuk1nqlmxc">蓝奏云网盘下载（提取码:8uwa）<a> <a href="https://spaceqq.github.io/ruanjian/NP10.exe">官网下载<a> 版本：V1.0 </p>
+	<p>3.圈圈媒体播放器     <a href="https://wwjy.lanzouj.com/iZsmC1nqlv3g">蓝奏云网盘下载（提取码:a2nq）<a> <a href="https://spaceqq.github.io/ruanjian/WMPB12.exe">官网下载<a> 版本：Beta 1.2 </p>
+	<p></p>
+    </div>
+<p>青，取之于蓝而青于蓝；冰，水为之而寒于水</p>
+       <div class="inner-rounded-box">
+	   <br/>
+           <p>今日天气：<div class="inner-text">
+<iframe width="480" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=9&icon=1&py=guangzhou&site=12"></iframe></p>
+       <p>当前时间：                 <script>
+        function updateDateTime() {
+            var date = new Date();
+            var year = date.getFullYear ();
+            var month = ("0" + (date.getMonth () + 1)).slice(-2);
+            var day = ("0" + date.getDate ()).slice(-2);
+            var hours = ("0" + date.getHours ()).slice(-2);
+            var minutes = ("0" + date.getMinutes ()).slice(-2);
+            var seconds = ("0" + date.getSeconds ()).slice(-2);
+
+            var formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            document.getElementById ("datetime").innerHTML = formattedDateTime;
+        }
+
+        // 每秒更新一次日期和时间
+        setInterval(updateDateTime, 1000);
+    </script><div id="datetime"></div></p>
+           </div>
+</body>
+</html>
