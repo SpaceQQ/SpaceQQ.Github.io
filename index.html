@@ -3,50 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>圈圈の个人主页</title>
     <link rel="icon" href="favicon.ico " type="image/x-icon">
+    <title>圈圈の个人主页</title>
     <style>
-        .rounded-box {
-            width: 1350px;
-            height: 650px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
+        .outer-box {
+            width: 1400px;
+            height: 680px;
+            background-color: lightblue;
+            border-radius: 10px; /* 设置圆角 */
+            margin: 0 auto; /* 居中 */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px auto;
+        }
+
+        .inner-box {
+            width: 550px;
+            height: 350px;
+            background-color: white;
+            border-radius: 5px; /* 设置圆角 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .inner-box p {
+            margin: 0;
             text-align: center;
         }
-        .rounded-box p {
-            font-size: 16px;
-            color: #333;
-        }
-       .inner-rounded-box {
-           width: 500px;
-           height: 300px;
-           background-color: #fff;
-           border-radius: 5px;
-           margin: 10px auto;
-
-    </style>	
+    </style>
 </head>
 <body>
-    <div class="rounded-box">	
-         <div class="rounded-container">
-        <h1>圈圈の个人主页</h1>
-        <h2>欢迎你来到一位非常屑的UP主的个人主页</h2>
-        <br/><p>UP自制软件合集</p>
-	<p>1.圈圈浏览器     <a href="https://wwjy.lanzouj.com/iRuO91mnkxwh">蓝奏云网盘下载（提取码:9jz4）<a> <a href="https://spaceqq.github.io/ruanjian/LLQ10.exe">官网下载<a> 版本：V1.0 </p>
-	<p>2.圈圈记事本     <a href="https://wwjy.lanzouj.com/iouuk1nqlmxc">蓝奏云网盘下载（提取码:8uwa）<a> <a href="https://spaceqq.github.io/ruanjian/NP10.exe">官网下载<a> 版本：V1.0 </p>
-	<p>3.圈圈媒体播放器     <a href="https://wwjy.lanzouj.com/iZsmC1nqlv3g">蓝奏云网盘下载（提取码:a2nq）<a> <a href="https://spaceqq.github.io/ruanjian/WMPB12.exe">官网下载<a> 版本：Beta 1.2 </p>
-	<p></p>
-    </div>
-<p>青，取之于蓝而青于蓝；冰，水为之而寒于水</p>
-       <div class="inner-rounded-box">
-	   <br/>
-           <p>今日天气：<div class="inner-text">
-<iframe width="480" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=9&icon=1&py=guangzhou&site=12"></iframe></p>
-       <p>当前时间：                 <script>
+    <div class="outer-box">
+        <div class="inner-box">
+<h1>圈圈の个人主页</h1>
+<p>欢迎你来到一名非常屑的六年级小学生的个人主页!</p>
+<br/>
+            <p>UP自制小垃圾</p>
+            <p>1.圈圈浏览器 版本 V1.0 丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iRuO91mnkxwh'">蓝奏云网盘下载（提取码 9jz4）</button></p>
+            <p>2.圈圈记事本 版本 V1.0 丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iouuk1nqlmxc'">蓝奏云网盘下载（提取码 8uwa）</button></p>
+            <p>3.圈圈浏览器 版本 Beta 1.2丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iZsmC1nqlv3g'">蓝奏云网盘下载（提取码 a2nq）</button></p>
+            <p>4.圈圈浏览器 版本 V1.0_Beta 1 内部版本 A Beta 1.0<button onclick="window.location.href='https://wwjy.lanzouj.com/iemxr2bjkmmh'">蓝奏云网盘下载（提取码 6t47）</button> <button onclick="window.location.href='https://pan.huang1111.cn/s/WzwOAU3'">huang1111网盘下载</button> <button onclick="window.location.href='https://share.weiyun.com/VUtlwk8p'">腾讯微云下载</button> <button onclick="window.location.href='https://SpaceQQ.Github.io/SD/Download/1.0/B1/圈圈安全软件 V1.0_Beta1 Setup.exe'">官网下载</button></p>
+<br/>
+<p style="text-align:center">QUANQUAN(C) 2023-2024 Inc.丨Website Version:2.0</p>
+        </div>
+        <div class="inner-box">
+            <script>
+             
         function updateDateTime() {
             var date = new Date();
             var year = date.getFullYear ();
@@ -56,13 +61,17 @@
             var minutes = ("0" + date.getMinutes ()).slice(-2);
             var seconds = ("0" + date.getSeconds ()).slice(-2);
 
-            var formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            var formattedDateTime = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
             document.getElementById ("datetime").innerHTML = formattedDateTime;
         }
 
         // 每秒更新一次日期和时间
         setInterval(updateDateTime, 1000);
-    </script><div id="datetime"></div></p>
-           </div>
+             </script>
+	    <h2><div id="datetime">正在获取时间</div></h2>
+            <h3>今日天气</h3>
+	    <iframe width="480" scrolling="no" height="100" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=9&icon=1&py=&site=12">
+        </div>
+    </div>
 </body>
 </html>
