@@ -3,75 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico " type="image/x-icon">
+    <meta name="description" content="圈圈的个人主页">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>圈圈の个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        .outer-box {
-            width: 1400px;
-            height: 680px;
-            background-color: lightblue;
-            border-radius: 10px; /* 设置圆角 */
-            margin: 0 auto; /* 居中 */
+        .social-links {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
         }
-
-        .inner-box {
-            width: 550px;
-            height: 350px;
-            background-color: white;
-            border-radius: 5px; /* 设置圆角 */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        
+        .social-btn {
+            display: inline-flex;
             align-items: center;
-            margin: 5px;
+            justify-content: center;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-
-        .inner-box p {
-            margin: 0;
-            text-align: center;
+        
+        .bilibili-btn {
+            background-color: #FB7299;
+            color: white;
+        }
+        
+        .kuaishou-btn {
+            background-color: #FF9900;
+            color: white;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .social-btn i {
+            margin-right: 5px;
         }
     </style>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <div class="outer-box">
-        <div class="inner-box">
-<h1>圈圈の个人主页</h1>
-<p>泥嚎雅！祝你早上中午晚上好！</p>
-<br/>
-            <p>UP自制小垃圾</p>
-            <p>1.圈圈浏览器 版本 V1.0 丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iRuO91mnkxwh'">蓝奏云网盘下载（提取码 9jz4）</button></p>
-            <p>2.圈圈记事本 版本 V1.0 丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iouuk1nqlmxc'">蓝奏云网盘下载（提取码 8uwa）</button></p>
-            <p>3.圈圈浏览器 版本 Beta 1.2丨 <button onclick="window.location.href='https://wwjy.lanzouj.com/iZsmC1nqlv3g'">蓝奏云网盘下载（提取码 a2nq）</button></p>
-            <p>4.圈圈安全软件 版本 V1.0_Beta 1丨<button onclick="window.location.href='https://wwjy.lanzouj.com/iemxr2bjkmmh'">蓝奏云网盘下载（提取码 6t47）</button> <button onclick="window.location.href='https://share.weiyun.com/VUtlwk8p'">腾讯微云下载</button> <button onclick="window.location.href='https://SpaceQQ.Github.io/SD'">官网下载</button></p>
-<br/>
-<p style="text-align:center">© Circlecircles 2021-2025 Inc.丨Website Version 2.1 <button onclick="window.location.href='update-logs.html'">网站更新日志</button></p>
-        </div>
-        <div class="inner-box">
-            <script>
-             
-        function updateDateTime() {
-            var date = new Date();
-            var year = date.getFullYear ();
-            var month = ("0" + (date.getMonth () + 1)).slice(-2);
-            var day = ("0" + date.getDate ()).slice(-2);
-            var hours = ("0" + date.getHours ()).slice(-2);
-            var minutes = ("0" + date.getMinutes ()).slice(-2);
-            var seconds = ("0" + date.getSeconds ()).slice(-2);
+    <div class="container">
+        <header class="header">
+            <h1 class="title">圈圈の个人主页</h1>
+            <p class="greeting">泥嚎雅！祝你早上中午晚上好！</p>
+            <div class="version-info">
+            </div>
+        </header>
 
-            var formattedDateTime = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
-            document.getElementById ("datetime").innerHTML = formattedDateTime;
-        }
+        <main class="main-content">
+            <section class="software-section">
+                <h2><i class="fas fa-download"></i> UP自制小垃圾</h2>
+                <div class="software-grid">
+                    <div class="software-card">
+                        <h3>圈圈浏览器 <span class="software-version">V1.0</span></h3>
+                        <p class="software-update">更新: 2024-01-29</p>
+                        <div class="software-links">
+                            <button class="download-btn" onclick="window.location.href='https://wwjy.lanzouj.com/iRuO91mnkxwh'">
+                                <i class="fas fa-cloud-download-alt"></i> 蓝奏云下载 (提取码 9jz4)
+                            </button>
+                            <a href="browser/index.html" class="official-link">
+                                <i class="fas fa-external-link-alt"></i> 软件官网
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card">
+                        <h3>圈圈记事本 <span class="software-version">V1.0</span></h3>
+                        <p class="software-update">更新: 2024-02-08</p>
+                        <div class="software-links">
+                            <button class="download-btn" onclick="window.location.href='https://wwjy.lanzouj.com/iouuk1nqlmxc'">
+                                <i class="fas fa-cloud-download-alt"></i> 蓝奏云下载 (提取码 8uwa)
+                            </button>
+                            <a href="notepad/index.html" class="official-link">
+                                <i class="fas fa-external-link-alt"></i> 软件官网
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card">
+                        <h3>制作中的游戏 <span class="software-version">Beta 1.0</span></h3>
+                        <p class="software-update">更新: 2025-07-19</p>
+                        <div class="software-links">
+                            <button class="download-btn" disabled style="opacity:0.5; cursor:not-allowed">
+                                <i class="fas fa-cloud-download-alt"></i> 下载暂不可用
+                            </button>
+                            <a href="game/index.html" class="official-link">
+                                <i class="fas fa-external-link-alt"></i> 查看开发进度
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="software-card">
+                        <h3>圈圈安全软件 <span class="software-version">V1.0_Beta1</span></h3>
+                        <p class="software-update">更新: 2024-10-04</p>
+                        <div class="download-options">
+                            <button class="download-btn" onclick="window.location.href='https://wwjy.lanzouj.com/iemxr2bjkmmh'">
+                                <i class="fas fa-cloud-download-alt"></i> 蓝奏云 (提取码 6t47)
+                            </button>
+                            <button class="download-btn" onclick="window.location.href='https://share.weiyun.com/VUtlwk8p'">
+                                <i class="fas fa-cloud"></i> 腾讯微云
+                            </button>
+                            <a href="security/index.html" class="official-link">
+                                <i class="fas fa-external-link-alt"></i> 软件官网
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        // 每秒更新一次日期和时间
-        setInterval(updateDateTime, 1000);
-             </script>
-	    <h2><div id="datetime">正在获取时间</div></h2>
-            <h3>天气信息</h3>
-	    <iframe width="480" scrolling="no" height="100" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=9&icon=1&py=&site=12">
-        </div>
+            <section class="info-section">
+                <div class="info-card">
+                    <h2><i class="far fa-clock"></i> 当前时间</h2>
+                    <div id="datetime" class="datetime">正在获取时间...</div>
+                </div>
+                
+                <div class="info-card">
+                    <h2><i class="fas fa-cloud-sun"></i> 天气信息</h2>
+                    <div class="weather-container">
+                        <iframe width="480" scrolling="no" height="100" frameborder="0" allowtransparency="true" 
+                                src="https://i.tianqi.com?c=code&id=9&icon=1&py=&site=12"></iframe>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2><i class="fas fa-home"></i> 主页</h2>
+                    <div class="social-links">
+                        <a href="https://space.bilibili.com/696533041" target="_blank" class="social-btn bilibili-btn">
+                            <i class="fab fa-bilibili"></i> 哔哩哔哩
+                        </a>
+                        <a href="https://www.kuaishou.com" target="_blank" class="social-btn kuaishou-btn">
+                            <i class="fas fa-video"></i> 快手
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© Circlecircles 2021-2025 Inc.丨Website Version 3.0</p>
+            <a href="update-logs.html" class="update-link">
+                <i class="fas fa-history"></i> 网站更新日志
+            </a>
+        </footer>
     </div>
 </body>
 </html>
