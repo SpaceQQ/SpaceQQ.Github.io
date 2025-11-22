@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>网站更新日志</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #f8faff 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .outer-box {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .inner-box {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(90, 125, 224, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(90, 125, 224, 0.4);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        .log-entry {
+            background-color: var(--light-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .log-entry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .log-entry h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .log-entry h3 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        
+        .log-entry ul {
+            padding-left: 20px;
+        }
+        
+        .log-entry li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .log-entry li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-bg);
+            color: var(--text-light);
+        }
+        
+        /* 添加时间线效果 */
+        .log-entry {
+            position: relative;
+        }
+        
+        .log-entry::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -15px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .log-entry::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: -5px;
+            width: 2px;
+            height: calc(100% - 20px);
+            background: var(--primary-light);
+            z-index: 0;
+        }
+        
+        .log-entry:last-child::before {
+            display: none;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .outer-box {
+                padding: 15px;
+            }
+            
+            .inner-box {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .log-entry {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <button class="back-button" onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left"></i> 返回主页
+            </button>
+            <h1>网站更新日志</h1>
+            
+            <div class="log-entry">
+                <h2>Website V1.0</h2>
+                <h3>更新日期：2022年3月12日</h3>
+                <ul>
+                    <li>没有更新信息</li>
+                </ul>
+            </div>
+            
+            <div class="log-entry">
+                <h2>Website V2.0</h2>
+                <h3>更新日期：2024年7月21日</h3>
+                <ul>
+                    <li>更新网页UI</li>
+                    <li>添加资源下载</li>
+                    <li>添加新功能：天气预报与时间播报</li>
+                    <li>添加杀软官网</li>
+                </ul>
+            </div>
+
+            <div class="log-entry">
+                <h2>Website V2.1</h2>
+                <h3>更新日期：2025年7月16日</h3>
+                <ul>
+                    <li>修复了天气预报位置获取错误的BUG</li>
+                    <li>添加新功能：天气预报</li>
+                    <li>修改了软件的下载源</li>
+                </ul>
+            </div>
+                        
+            <div class="log-entry">
+                <h2>Website V3.0</h2>
+                <h3>更新日期：2025年7月19日</h3>
+                <ul>
+                    <li>新增软件停止更新提示</li>
+                    <li>新增社交媒体按钮</li>
+                    <li>新增游戏测试接口（暂时关闭）</li>
+                    <li>优化整体UI设计</li>
+                    <li>修复时间无法正常显示的BUG</li>
+                </ul>
+            </div>
+            
+            <div class="log-entry">
+                <h2>Website V3.0.1</h2>
+                <h3>更新日期：2025年7月19日</h3>
+                <ul>
+                    <li>修复文字排版不正确的BUG</li>
+                </ul>
+            </div>
+
+            <div class="log-entry">
+                <h2>Website V3.1</h2>
+                <h3>更新日期：2025年7月21日</h3>
+                <ul>
+                    <li>新增404报错页面</li>
+                    <li>新增一个彩蛋</li>
+                    <li>修复部分文字显示错误的BUG</li>
+                    <li>更新了手机版网页（测试）</li>
+                </ul>
+            </div>
+
+            <div class="log-entry">
+                <h2>Website V3.2</h2>
+                <h3>更新日期：2025年7月21日</h3>
+                <ul>
+                    <li>更新了圈圈安全软件的官网</li>
+                </ul>
+            </div>
+            
+            <div class="log-entry">
+                <h2>Website V3.3</h2>
+                <h3>更新日期：2025年10月19日</h3>
+                <ul>
+                    <li>新增网站跳转逻辑</li>
+                    <li>修复更新日志页面描述错误的问题</li>
+                    <li>修复无法跳转个人主页的BUG</li>
+                    <li>更新了部分网站的内容和UI设计</li>
+                    <li>在游戏官网中，添加了新语言：英语(English)和繁体中文</li>
+                    <li>添加了主页公告显示</li>
+                </ul>
+            </div>
+
+            <div class="log-entry">
+                <h2>Website V3.3.1</h2>
+                <h3>更新日期：2025年10月24日</h3>
+                <ul>
+                    <li>修复游戏官网跳转错误的BUG</li>
+                    <li>修复了无法跳转个人主页的BUG</li>
+                    <li>添加了个人简介</li>
+                    <li>添加了抖音、小红书、微博的个人主页跳转方式</li>
+                </ul>
+            </div>
+
+            <div class="log-entry">
+                <h2>Website V3.4</h2>
+                <h3>更新日期：2025年11月22日</h3>
+                <ul>
+                    <li>更新了所有网站的UI设计</li>
+                    <li>添加了浅暗色主题切换功能</li>
+                    <li>修复了抖音、小红书、微博的个人主页跳转方式无法正常显示的BUG</li>
+                </ul>
+            </div>
+
+            <p class="footer">Copyright © Circlecircles 2021-2025 Inc. | 圈圈の个人主页 | Website Version 3.4 | <!---<a href="https://icp.gov.moe/?keyword=20255041" target="_blank">萌ICP备20255041号</a>---></p>
+        </div>
+    </div>
+</body>
+</html>

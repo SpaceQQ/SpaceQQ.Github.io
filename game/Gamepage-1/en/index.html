@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .download-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .software-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .download-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .download-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .download-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #27ae60;
+        }
+        
+        .software-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+            .about-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        #loading-status {
+            width: 300px;
+            border: 1px #669CB8 solid;
+            height: 15px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #E1E9EE, white);
+            padding: 1px;
+        }
+        #percent {
+            background: linear-gradient(to bottom, #7BC3FF, #42A9FF, #7BC3FF);
+            width: 0%;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .g-container {
+            width: 240px;
+            height: 15px;
+            border-radius: 25px;
+            background: #eee;
+        }
+        .g-progress {
+            width: 15%;
+            height: inherit;
+            border-radius: 25px 0 0 25px;
+            background: #0f0;
+        }
+
+        .g-progress {
+            transition: width .2s linear;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        li a.active {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        @media screen and (max-width: 600px){
+            ul.topnav li.right, 
+            ul.topnav li {float: none;}
+        }
+
+          ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#333;
+  }
+  
+  li{
+    float:left;
+  }
+  
+  li a, .dropbtn
+  {
+    display:inline-block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+  }
+  
+  li a:hover, .dropdown:hover, .dropbtn
+  {
+    background-color:#111;
+  }
+  
+  .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Homepage</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">Language</a>
+    <div class="dropdown-content">
+      <a href="../zh-cn/index.html">中文（简体）</a>
+      <a href="../zh-tl/index.html">中文（繁体）</a>
+      <a href="../en/index.html">English</a>
+    </div>
+    </ul>
+    <div class="container">
+        <div class="download-container">
+            <div class="software-header">
+                <h1><i class="fas fa-tools"></i> 制作中的游戏</h1>
+                <p class="version-info">Developers:HelloCircle Studio | Version: V1.0_Beta 1.0 | State: Development</p>
+            </div>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <h3><i class="fas fa-download"></i> Download</h3>
+                    <p>The current version is developing, Please look forward to.(Expected test time: July 30, 2028)</p>
+                    <button class="download-btn" disabled style="opacity:0.5; cursor:not-allowed" name="下载游戏">
+                        下载
+                    </button>
+                </div>
+            </div>
+            
+            <div class="software-info">
+                <h2><i class="fas fa-info-circle"></i> Development progress</h2>
+                <div class="g-container">
+                <div class="g-progress"></div>
+                </div>
+                <p>
+                    Production progress: 15%
+                </p>
+                <h3><i class="fa fa-quote-left"></i> Introduction to the game</h3>
+                <p>No introduction</p>
+
+                <h3><i class="fas fa-info-circle"></i> Massage</h3>
+                <h4>1.Use the Unreal Engine 5.8 Game engine Develop</h4>
+                <h4>2.Game configuration requirements:</h4>
+                <p><font color="#F5DEB3">Computer:</font></p>
+                <p><font color="#AEEEEE">1 - Minimum configuration requirements for games:</font></p>
+                <p>CPU: Inter Core i5 - 7代 / AMD Ryzen 3 3000 Series equivalent processor and above</p>
+                <p>Graphics card: NVIDIA Geforce GTX 1060 / AMD Radeon RX 580 & AMD Radeon 780M Graphics / Inter Arc A380 & Inter Arc Xe2 Graphics And above, It is recommended to pass the memory size 4GB and above</p>
+                <p>Memory: 16GB And above</p>
+                <p>System Version: Windows 10 1507 And above(<font color="FF4040">It is not recommended to use the preview system to play</font>)</p>
+                <p>Storage space: 20GB And above</p>
+                <p><font color="#AEEEEE">2 - Game recommendation configuration:</font></p>
+                <p>CPU: Inter Core i5 - 11代 / AMD Ryzen 5 5000 Series equivalent processor and above</p>
+                <p>Graphics card: NVIDIA Geforce RTX 2060 / AMD Radeon RX 5600 XT / Inter Arc A580 And above, It is recommended to pass the memory size 6GB and above</p>
+                <p>Memory: 24GB And above</p>
+                <p>System Version: Windows 11 24H2(<font color="FF4040">It is not recommended to use the preview system to play</font>)</p>
+                <p>Storage space: 50GB And above</p>
+                <p><font color="#F5DEB3">Android:</font></p>
+                <p>CPU: Snapdragon 6 Gen1 / MediaTek 8250 And above</p>
+                <p>Storage space: 20GB And above</p>
+                <p>Memory: 6GB And above</p>
+                <p>System Version: Android 10.0 And above</p>
+                <p><font color="#F5DEB3">iOS:</font></p>
+                <p>Equipment: iPhone 12 Pro And above Model</p>
+                <p>Storage space: 20GB And above</p>
+                <p>System Version: iOS 14.0 And above</p>
+		<h4>3.Game platform support:</h4>
+		<p>1 - Windows Platform (Windows 10 And above)</p>
+		<p>2 - Android Platform (Android 10 And above)</p>
+		<p>3 - iOS Platform (iOS 14.0 And above)</p>
+		<h4>4.Game real machine demo:</h4>
+        <p>I don't know:(</p>
+            </div>
+            <p style="text-align:center">-------------------- I am dividing line --------------------</p>
+            <div class="about-info">
+                <h2><i class="fa fa-edit"></i> Apply for internal test qualification</h2>
+                <h3><i class="fa fa-address-book"></i> Sorry, your current area has not been opened the Test qualification.</h3>
+            </div>
+        </div>
+    </div>
+            <p class="footer">Copyright © Circlecircles 2021-2025 Inc. | 圈圈の个人主页 | Website Version 3.4 | <!---<a href="https://icp.gov.moe/?keyword=20255041" target="_blank">萌ICP备20255041号</a>---></p>
+</body>
+</html>

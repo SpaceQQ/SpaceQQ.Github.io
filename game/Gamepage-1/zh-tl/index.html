@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名字还在想</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .download-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .software-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .download-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .download-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .download-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #27ae60;
+        }
+        
+        .software-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+            .about-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        #loading-status {
+            width: 300px;
+            border: 1px #669CB8 solid;
+            height: 15px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #E1E9EE, white);
+            padding: 1px;
+        }
+        #percent {
+            background: linear-gradient(to bottom, #7BC3FF, #42A9FF, #7BC3FF);
+            width: 0%;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .g-container {
+            width: 240px;
+            height: 15px;
+            border-radius: 25px;
+            background: #eee;
+        }
+        .g-progress {
+            width: 15%;
+            height: inherit;
+            border-radius: 25px 0 0 25px;
+            background: #0f0;
+        }
+
+        .g-progress {
+            transition: width .2s linear;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        li a.active {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        @media screen and (max-width: 600px){
+            ul.topnav li.right, 
+            ul.topnav li {float: none;}
+        }
+
+          ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#333;
+  }
+  
+  li{
+    float:left;
+  }
+  
+  li a, .dropbtn
+  {
+    display:inline-block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+  }
+  
+  li a:hover, .dropdown:hover, .dropbtn
+  {
+    background-color:#111;
+  }
+  
+  .dropdown
+  {
+    display:inline-block;
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">主頁</a></li>
+        <li><a href="#news">新聞</a></li>
+        <li><a href="#contact">聯係我們</a></li>
+        <li><a href="#about">關於</a></li>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">語言</a>
+    <div class="dropdown-content">
+      <a href="../zh-cn/index.html">中文（简体）</a>
+      <a href="../zh-tl/index.html">中文（繁體）</a>
+      <a href="../en/index.html">English</a>
+    </div>
+    </ul>
+    <div class="container">
+        <div class="download-container">
+            <div class="software-header">
+                <h1><i class="fas fa-tools"></i> Game</h1>
+                <p class="version-info">開發者: HelloCircle Studio | 版本: V1.0_Beta 1.0 | 狀態: 開發中</p>
+            </div>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <h3><i class="fas fa-download"></i> 下載</h3>
+                    <p>當前版本正在開發中，敬請期待(預計一測日期:2028年7月30日)</p>
+                    <button class="download-btn" disabled style="opacity:0.5; cursor:not-allowed" name="Download">
+                        下載
+                    </button>
+                </div>
+            </div>
+            
+            <div class="software-info">
+                <h2><i class="fas fa-info-circle"></i> 開發進度</h2>
+                <div class="g-container">
+                <div class="g-progress"></div>
+                </div>
+                <p>
+                    製作進度: 15% 咕咕咕
+                </p>
+                <h3><i class="fa fa-quote-left"></i> 遊戲簡介</h3>
+                <p>暫無簡介</p>
+
+                <h3><i class="fas fa-info-circle"></i> 神秘剧透</h3>
+                <h4>1.使用 Unreal Engine 5.8 引擎開發</h4>
+                <h4>2.遊戲配置要求：</h4>
+                <p><font color="#F5DEB3">電腦平臺:</font></p>
+                <p><font color="#AEEEEE">1 - 遊戲最低配置要求:</font></p>
+                <p>CPU: Inter Core i5 - 7代 / AMD Ryzen 3 3000 系列同等处理器及以上</p>
+                <p>顯卡: NVIDIA Geforce GTX 1060 / AMD Radeon RX 580 & AMD Radeon 780M Graphics / Inter Arc A380 & Inter Arc Xe2 Graphics 及以上，建議顯存大小 4GB 及以上</p>
+                <p>內存: 16GB及以上</p>
+                <p>係統版本: Windows 10 1507 及以上(<font color="FF4040">不建議適用預覽版系統進行遊玩</font>)</p>
+                <p>磁盤空間: 20GB及以上</p>
+                <p><font color="#AEEEEE">2 - 遊戲推薦配置:</font></p>
+                <p>CPU: Inter Core i5 - 11代 / AMD Ryzen 5 5000 系列同等處理器及以上</p>
+                <p>顯卡: NVIDIA Geforce RTX 2060 / AMD Radeon RX 5600 XT / Inter Arc A580 及以上，建議顯存大小 6GB 及以上</p>
+                <p>內存: 24GB及以上</p>
+                <p>係統版本: Windows 11 24H2(<font color="FF4040">不建議使用預覽版系統進行遊玩</font>)</p>
+                <p>磁盤空間: 50GB及以上</p>
+                <p><font color="#F5DEB3">安卓端：</font></p>
+                <p>CPU: Snapdragon 6 Gen1 / MediaTek 8250及以上</p>
+                <p>存儲空間: 20GB及以上</p>
+                <p>內存: 6GB及以上</p>
+                <p>係統版本: Android 10.0 及以上</p>
+                <p><font color="#F5DEB3">iOS平臺:</font></p>
+                <p>設備: iPhone 12 Pro 及以上機型</p>
+                <p>存儲空間: 20GB及以上</p>
+                <p>係統版本: iOS 14.0 及以上</p>
+		<h4>3.游戲平臺支持：</h4>
+		<p>1 - Windows 平臺(Windows 10 及以上)</p>
+		<p>2 - Android 平臺(Android 10 及以上)</p>
+		<p>3 - iOS 平臺(iOS 14.0 及以上)</p>
+		<h4>4.遊戲實機演示</h4>
+        <p>卖个关子，反正还可以:(</p>
+            </div>
+            <p style="text-align:center">-------------------- 我是分割線 --------------------</p>
+            <div class="about-info">
+                <h2><i class="fa fa-edit"></i> 申請內測資格</h2>
+                <h3><i class="fa fa-address-book"></i> 抱歉, 您當前的地區暫未開放內測資格</h3>
+            </div>
+        </div>
+    </div>
+            <p class="footer">Copyright © Circlecircles 2021-2025 Inc. | 圈圈の个人主页 | Website Version 3.4 | <!---<a href="https://icp.gov.moe/?keyword=20255041" target="_blank">萌ICP备20255041号</a>---></p>
+</body>
+</html>
